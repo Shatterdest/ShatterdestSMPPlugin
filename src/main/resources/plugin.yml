@@ -1,0 +1,5 @@
+name: TestPlugin
+main: io.github.iyeet205.testplugin.Class
+version: 1.0.0
+description: This plugin is a test.
+author: Shatterdest
