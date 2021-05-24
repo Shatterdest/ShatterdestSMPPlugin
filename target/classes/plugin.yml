@@ -1,5 +1,11 @@
-name: TestPlugin
-main: io.github.iyeet205.testplugin.Class
+name: ShatterSMPPlugin
+main: io.github.shatterdest.enablemsg.Class
 version: 1.0.0
 description: This plugin is a test.
 author: Shatterdest
+commands:
+   WitheredBomb:
+      description: Give withered bomb
+      usage: /WitheredBomb
+      permission: witheredbomb.shatterdest
+      permission-message: You don't have permission to use this command!
