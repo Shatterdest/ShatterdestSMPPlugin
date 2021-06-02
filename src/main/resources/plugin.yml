@@ -1,5 +1,5 @@
 name: ShatterSMPPlugin
-main: io.github.shatterdest.enablemsg.Class
+main: io.github.shatterdest.ShatterSMPPlugin.Main
 version: 1.0.0
 description: This plugin is a test.
 author: Shatterdest

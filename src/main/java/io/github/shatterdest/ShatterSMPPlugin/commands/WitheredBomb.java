@@ -1,11 +1,14 @@
 package io.github.shatterdest.ShatterSMPPlugin.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
+import io.github.shatterdest.ShatterSMPPlugin.Main;
 
 
 public class WitheredBomb implements CommandExecutor {
@@ -14,16 +17,10 @@ public class WitheredBomb implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             // Create a new ItemStack (type: diamond)
-            ItemStack diamond = new ItemStack(Material.DIAMOND);
-
-            // Create a new ItemStack (type: brick)
-            ItemStack bricks = new ItemStack(Material.BRICK);
-
-            // Set the amount of the ItemStack
-            bricks.setAmount(20);
+            ItemStack tnt = new ItemStack(Material.TNT);
 
             // Give the player our items (comma-separated list of all ItemStack)
-            player.getInventory().addItem(bricks, diamond);
+            player.getInventory().addItem(tnt);
             // Here we need to give items to our player
         }
 
@@ -36,17 +33,15 @@ public class WitheredBomb implements CommandExecutor {
 		// TODO Auto-generated method stub
 	       if (sender instanceof Player) {
 	            Player player = (Player) sender;
-	            // Create a new ItemStack (type: diamond)
-	            ItemStack diamond = new ItemStack(Material.DIAMOND);
 
 	            // Create a new ItemStack (type: brick)
-	            ItemStack bricks = new ItemStack(Material.BRICK);
+	            ItemStack tnt = new ItemStack(Material.TNT);
 
 	            // Set the amount of the ItemStack
-	            bricks.setAmount(20);
+	            tnt.setAmount(1);
 
 	            // Give the player our items (comma-separated list of all ItemStack)
-	            player.getInventory().addItem(bricks, diamond);
+	            player.getInventory().addItem(tnt);
 	            // Here we need to give items to our player
 		return true;
 	       }
