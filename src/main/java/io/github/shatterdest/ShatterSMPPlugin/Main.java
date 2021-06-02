@@ -1,4 +1,4 @@
-package io.github.shatterdest.enablemsg;
+package io.github.shatterdest.ShatterSMPPlugin;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -6,15 +6,15 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import io.github.shatterdest.commands.CommandWitheredBomb;
+import io.github.shatterdest.ShatterSMPPlugin.commands.WitheredBomb;
 
-public final class Class extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
     
     @Override
     public void onEnable() {
     	getLogger().info("Shatterdest's Plugin has been Enabled!");
-		this.getCommand("WitheredBomb").setExecutor(new CommandWitheredBomb());
+		this.getCommand("WitheredBomb").setExecutor(new WitheredBomb());
         config.addDefault("Welcome msg", true);
         config.options().copyDefaults(true);
         saveConfig();
