@@ -59,7 +59,7 @@ public class WandOfFire implements CommandExecutor {
 	            // Give the player our items (comma-separated list of all ItemStack)
 	            player.getInventory().addItem(blaze_rod);
 	            
-	            sender.sendMessage("You have been given Wand of Fire!");
+	            sender.sendMessage(ChatColor.GREEN + "You have been given Wand of Fire!");
 	            // Here we need to give items to our player
 		return true;
 	       }
