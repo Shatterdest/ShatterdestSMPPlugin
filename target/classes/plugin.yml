@@ -4,8 +4,8 @@ version: 1.0.0
 description: This plugin is a test.
 author: Shatterdest
 commands:
-   WandOfFire:
-      description: Give Wand of Fire
-      usage: /WandOfFire
-      permission: wandoffire.shatterdest
+   MagmaStaff:
+      description: Give MagmaStaff
+      usage: /MagmaStaff
+      permission: magmastaff.shatterdest
       permission-message: You don't have permission to use this command!
