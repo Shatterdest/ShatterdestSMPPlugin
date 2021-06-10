@@ -9,56 +9,50 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
-import java.util.Map;
-
+import java.util.UUID;
 import org.bukkit.ChatColor;
 
 public class MagmaStaffUse implements Listener {
 
-	private Map<String, Long> cooldowns = new HashMap<String, Long>();
-
+    public HashMap<UUID, Long> cooldowns = new HashMap<>();
+    
 	@EventHandler
-	public void MagmaStaffUse(PlayerInteractEvent event) {
-		Player player = (Player) event.getPlayer();
-
-		final ItemStack item = event.getItem();
-		{
-			if (item == null)
-				return;
-			final ItemMeta meta = item.getItemMeta();
-			if (meta == null)
-				return;
-			if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-				if (event.getItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Magma Staff")) {
+	public void MagmaStaffUse(PlayerInteractEvent e) {
+		Player player = (Player) e.getPlayer();
+		  final UUID u = e.getPlayer().getUniqueId();
+			if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+				if (e.getItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Magma Staff")) {
 					if (player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
-						if(cooldowns.containsKey(player.getName())) {
-			                long sgs = ((cooldowns.get(player.getName()) / 1000) + 2) - (System.currentTimeMillis() / 1000);
-			                if(sgs > 0) {
-			                    player.sendMessage("&cYou must wait &7"+sgs+" &csecond(s).");
-			                    return;
-			                }
-			}
-
-							return;
+						if (cooldowns.containsKey(u)) {
+							if (cooldowns.get(u) > 0) {
+								int timeLeft = (int) (cooldowns.get(u) / 20);
+								player.sendMessage(ChatColor.RED + "Ability is on cooldown for another " + timeLeft + ((timeLeft == 1) ? " second" : " seconds"));
+							} else {
+								Fireball f = player.launchProjectile(Fireball.class);
+								f.setIsIncendiary(false);
+								player.sendMessage(
+										ChatColor.GREEN + "Used " + ChatColor.RED + "Fireball" + ChatColor.GREEN + "!");
+								cooldowns.put(u, 2 * 20L);
+							}
 						} else {
-							cooldowns.remove(player.getName());
-						}
-					} else {
-						cooldowns.put(player.getName(), System.currentTimeMillis() / 100 + 2);
-						Fireball f = player.launchProjectile(Fireball.class);
-						f.setIsIncendiary(false);
-						player.sendMessage(
-								ChatColor.GREEN + "Used " + ChatColor.RED + "Fireball" + ChatColor.GREEN + "!");
-						
-					}
+							Fireball f = player.launchProjectile(Fireball.class);
+							f.setIsIncendiary(false);
+							player.sendMessage(
+									ChatColor.GREEN + "Used " + ChatColor.RED + "Fireball" + ChatColor.GREEN + "!");
+							cooldowns.put(u, 2 * 20L);
+						}	
+					}				
 				}
-
 			}
 
-		}
 
-	}
+}
+}
+    
+
 
 
