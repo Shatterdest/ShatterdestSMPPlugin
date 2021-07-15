@@ -18,8 +18,7 @@ import org.bukkit.ChatColor;
 
 public class MagmaStaffUse implements Listener {
 
-    public HashMap<UUID, Long> cooldowns = new HashMap<>();
-    
+
 	@EventHandler
 	public void MagmaStaffUse(PlayerInteractEvent e) {
 		Player player = (Player) e.getPlayer();
@@ -27,30 +26,20 @@ public class MagmaStaffUse implements Listener {
 			if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
 				if (e.getItem().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Magma Staff")) {
 					if (player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
-						if (cooldowns.containsKey(u)) {
-							if (cooldowns.get(u) > 0) {
-								int timeLeft = (int) (cooldowns.get(u) / 20);
-								player.sendMessage(ChatColor.RED + "Ability is on cooldown for another " + timeLeft + ((timeLeft == 1) ? " second" : " seconds"));
-							} else {
+							}  
 								Fireball f = player.launchProjectile(Fireball.class);
 								f.setIsIncendiary(false);
 								player.sendMessage(
 										ChatColor.GREEN + "Used " + ChatColor.RED + "Fireball" + ChatColor.GREEN + "!");
-								cooldowns.put(u, 2 * 20L);
-							}
-						} else {
-							Fireball f = player.launchProjectile(Fireball.class);
-							f.setIsIncendiary(false);
-							player.sendMessage(
-									ChatColor.GREEN + "Used " + ChatColor.RED + "Fireball" + ChatColor.GREEN + "!");
-							cooldowns.put(u, 2 * 20L);
+
+							
 						}	
 					}				
 				}
-			}
+			
 
 
-}
+
 }
     
 
