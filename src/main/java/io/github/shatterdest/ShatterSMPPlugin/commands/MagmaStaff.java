@@ -16,20 +16,6 @@ import java.util.Arrays;
 
 public class MagmaStaff implements CommandExecutor {
 	// This method is called, when somebody uses our command
-	public boolean onCommand(CommandSender sender, MagmaStaff cmd, String label, String[] args) {
-		if (sender instanceof Player) {
-			Player player = (Player) sender;
-			// Create a new ItemStack (type: diamond)
-			ItemStack tnt = new ItemStack(Material.TNT);
-
-			// Give the player our items (comma-separated list of all ItemStack)
-			player.getInventory().addItem(tnt);
-			// Here we need to give items to our player
-		}
-
-		// If the player (or console) uses our command correct, we can return true
-		return true;
-	}
 
 	@Override
 	@EventHandler
