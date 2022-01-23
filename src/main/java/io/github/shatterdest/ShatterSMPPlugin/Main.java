@@ -1,14 +1,11 @@
   
 package io.github.shatterdest.ShatterSMPPlugin;
 
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.plugin.java.JavaPlugin;
-
 import io.github.shatterdest.ShatterSMPPlugin.commands.MagmaStaffCommand;
 import io.github.shatterdest.ShatterSMPPlugin.events.MagmaStaffUse;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
@@ -23,17 +20,6 @@ public class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MagmaStaffUse(), this);
         plugin = this;
     }
-    
-    public void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-
-        if (config.getBoolean("Welcome msg")) {
-            player.sendMessage("Welcome to ShroomSMP!");
-        } else {
-            player.sendMessage("");
-        }
-    }
-    
     @Override
     public void onDisable() {
     	getLogger().info("Shatterdest's Plugin has been Disabled!");
