@@ -12,7 +12,7 @@ import io.github.shatterdest.ShatterSMPPlugin.events.MagmaStaffUse;
 
 public class Main extends JavaPlugin implements Listener {
     FileConfiguration config = getConfig();
-    
+    JavaPlugin plugin;
     @Override
     public void onEnable() {
     	getLogger().info("Shatterdest's Plugin has been Enabled!");
@@ -21,6 +21,7 @@ public class Main extends JavaPlugin implements Listener {
         config.options().copyDefaults(true);
         saveConfig();
         getServer().getPluginManager().registerEvents(new MagmaStaffUse(), this);
+        plugin = this;
     }
     
     public void onPlayerJoin(PlayerJoinEvent event) {

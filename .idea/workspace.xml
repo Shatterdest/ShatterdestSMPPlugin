@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d66ce6-0103-466e-9286-07ad43b20955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/shatterdest/commands/WitheredBomb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShatterSMPPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShatterSMPPlugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/shatterdest/ShatterSMPPlugin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/shatterdest/ShatterSMPPlugin/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/shatterdest/ShatterSMPPlugin/events/MagmaStaffUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/shatterdest/ShatterSMPPlugin/events/MagmaStaffUse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1tOnz18Fc3KShBuod75FNsVLYVc" />
   <component name="ProjectViewState">
