@@ -1,4 +1,1 @@
-Shatterdest's Plugin for his SMP! (abandoned cuz ded)
-
-Made with Eclipse IDE
-
+Shatterdest's plugin he works on (occasionally)

@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import io.github.shatterdest.ShatterSMPPlugin.commands.MagmaStaff;
+import io.github.shatterdest.ShatterSMPPlugin.commands.MagmaStaffCommand;
 import io.github.shatterdest.ShatterSMPPlugin.events.MagmaStaffUse;
 
 public class Main extends JavaPlugin implements Listener {
@@ -16,7 +16,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
     	getLogger().info("Shatterdest's Plugin has been Enabled!");
-		this.getCommand("MagmaStaff").setExecutor(new MagmaStaff());
+		this.getCommand("MagmaStaff").setExecutor(new MagmaStaffCommand());
         config.addDefault("Welcome msg", true);
         config.options().copyDefaults(true);
         saveConfig();
