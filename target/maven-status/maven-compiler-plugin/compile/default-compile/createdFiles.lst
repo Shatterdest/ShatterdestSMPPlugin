@@ -1,4 +1,3 @@
 io\github\shatterdest\ShatterSMPPlugin\events\MagmaStaffUse.class
 io\github\shatterdest\ShatterSMPPlugin\Main.class
-io\github\shatterdest\ShatterSMPPlugin\commands\MagmaStaff.class
-io\github\shatterdest\ShatterSMPPlugin\events\MagmaStaffUse$1.class
+io\github\shatterdest\ShatterSMPPlugin\commands\MagmaStaffCommand.class

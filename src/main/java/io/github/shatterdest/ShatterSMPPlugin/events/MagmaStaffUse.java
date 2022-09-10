@@ -1,6 +1,5 @@
 package io.github.shatterdest.ShatterSMPPlugin.events;
 
-import io.github.shatterdest.ShatterSMPPlugin.Main;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Fireball;
@@ -10,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.scheduler.BukkitRunnable;
+import io.github.shatterdest.ShatterSMPPlugin.Main;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;

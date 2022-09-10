@@ -20,7 +20,7 @@ public class MagmaStaffCommand implements CommandExecutor {
 	@EventHandler
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "You are not a Player!");
+			sender.sendMessage(ChatColor.RED + "Error: You are not a Player!");
 			return true;
 		}
 		if (sender instanceof Player) {
