@@ -16,7 +16,7 @@ import java.util.UUID;
 
 public class MagmaStaffUse implements Listener {
 
-	public Map<UUID, Long> cooldowns = new HashMap<>();
+	public Map<UUID, Double> cooldowns = new HashMap<>();
 
 	@EventHandler
 	public void MagmaStaffUse(PlayerInteractEvent e) {
